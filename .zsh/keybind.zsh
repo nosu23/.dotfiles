@@ -12,3 +12,4 @@ bindkey '^O' checkout-fzf-gitbranch
 bindkey '^R' buffer-fzf-history
 bindkey '^\' ssh-fzf-sshconfig
 bindkey '^r' select-history
+bindkey "^t" tree_select_buffer
