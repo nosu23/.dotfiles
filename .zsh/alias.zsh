@@ -1,42 +1,37 @@
 # Move to the selected directory from the results of find
-cd-fzf-ls() {
+cd-fzf-fd() {
     local DIR_OR_FILE
     # DIR_OR_FILlsE=$(gls -aF --group-directories-first --color=always | fzf --tac --ansi --preview 'ls -al --color=always {}')
-    DIR_OR_FILE=$(ls --color=always | fzf --tac --ansi --preview 'ls -al --color=always {}')
+    DIR_OR_FILE=$(fd -t d -H --max-depth 1 --color=always | fzf --tac --ansi --preview 'ls -al --color=always {}')
     if [ -d "$DIR_OR_FILE" ]; then
         cd $DIR_OR_FILE
         ls
     fi
+
 }
-alias fcd=cd-fzf-ls
+alias fdc=cd-fzf-fd
 
 ls-fzf() {
     local DIR_OR_FILE
     # DIR_OR_FILlsE=$(gls -aF --group-directories-first --color=always | fzf --tac --ansi --preview 'ls -al --color=always {}')
-    DIR_OR_FILE=$(ls -a --color=always > /dev/null | fzf +m --tac --ansi --preview 'ls -al --color=always {}')
+    DIR_OR_FILE=$(fd -t f -t l -H --max-depth 1 --color=always | fzf +m --tac --ansi --preview 'ls -al --color=always {}')
     if [ -d "$DIR_OR_FILE" ]; then
         cd $DIR_OR_FILE
     elif [ -f "$DIR_OR_FILE" ]; then
-        vim $DIR_OR_FILE
+        view $DIR_OR_FILE
     else
         ls -laF $DIR_OR_FILE
     fi
 }
 alias fl=ls-fzf
 
-lslf-fzf() {
-    local DIR_OR_FILE
-    # DIR_OR_FILlsE=$(gls -aF --group-directories-first --color=always | fzf --tac --ansi --preview 'ls -al --color=always {}')
-    DIR_OR_FILE=$(ls -laF --color=always > /dev/null | fzf +m --tac --ansi --preview 'ls -al --color=always {}')
-    if [ -d "$DIR_OR_FILE" ]; then
-        cd $DIR_OR_FILE
-    elif [ -f "$DIR_OR_FILE" ]; then
-        vim $DIR_OR_FILE
-    else
-        ls -laF $DIR_OR_FILE
-    fi
-}
-alias fll=lslf-fzf
+#lslf-fzf() {
+#    local DIR_OR_FILE
+#    # DIR_OR_FILlsE=$(gls -aF --group-directories-first --color=always | fzf --tac --ansi --preview 'ls -al --color=always {}')
+#    DIR_OR_FILE=$(ls -laF --color=always > /dev/null | fzf +m --tac --ansi)
+#    echo $DIR_OR_FILE
+#}
+alias ll='ls -laF --color=always'
 
 
 # Open the selected file from the result of find in Vim
