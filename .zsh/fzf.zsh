@@ -51,8 +51,10 @@ function ssh-fzf-sshconfig() {
 zle -N ssh-fzf-sshconfig
 
 function select-history() {
-  BUFFER=$(history -n -r 1 | fzf --no-sort +m --query "$LBUFFER" --prompt="History > ")
-  CURSOR=$#BUFFER
+  history -n -r 1 | fzf --no-sort +m --query "$LBUFFER" --prompt="History > " | pbcopy
+  #BUFFER=$(history -n -r 1 | fzf --no-sort +m --query "$LBUFFER" --prompt="History > ")
+  #CURSOR=$#BUFFER
+  #echo $#BUFFER | pbcopy
 }
 zle -N select-history
 
