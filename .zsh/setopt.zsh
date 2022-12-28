@@ -11,3 +11,4 @@ setopt hist_ignore_all_dups   # 履歴が重複した場合に古い履歴を削
 setopt hist_ignore_dups       # 前回のイベントと重複する場合、履歴に保存しない
 setopt hist_save_no_dups      # 履歴ファイルに書き出す際、新しいコマンドと重複する古いコマンドは切り捨てる
 setopt share_history          # 全てのセッションで履歴を共有する
+setopt CLOBBER                # リダイレクトで上書き
