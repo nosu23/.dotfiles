@@ -51,7 +51,7 @@ function ssh-fzf-sshconfig() {
 zle -N ssh-fzf-sshconfig
 
 function select-history() {
-  history -n -r 1 | fzf --no-sort +m --query "$LBUFFER" --prompt="History > " | pbcopy
+  history -n -r 1 | fzf --no-sort +m --query "$LBUFFER" --prompt="History > " | tr -d '\n' | pbcopy # 暫定。いずれsedで最後の改行だけに変更したい
   #BUFFER=$(history -n -r 1 | fzf --no-sort +m --query "$LBUFFER" --prompt="History > ")
   #CURSOR=$#BUFFER
   #echo $#BUFFER | pbcopy
