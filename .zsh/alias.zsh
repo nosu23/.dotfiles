@@ -42,3 +42,13 @@ vim-fzf-find() {
     fi
 }
 alias fv=vim-fzf-find
+
+local-git-checkout() {
+  git branch --color | fzf --ansi | xargs git checkout
+}
+alias lg=local-git-checkout
+
+remote-git-checkout() {
+  git branch -a --color | fzf --ansi | xargs git checkout
+}
+alias rg=remote-git-checkout
