@@ -52,3 +52,8 @@ remote-git-checkout() {
   git branch -a --color | fzf --ansi | xargs git checkout
 }
 alias rg=remote-git-checkout
+
+rm-local-git-branch() {
+  git branch --color | fzf --ansi | xargs git br -D
+}
+alias rmlg=rm-local-git-branch
