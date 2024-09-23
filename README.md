@@ -1,4 +1,5 @@
 # .dotfiles
 my .dotfiles for mac
 
-ln -s ~/dotfiles/nvim ~/.config
+cd repository
+ln -s $(pwd)/nvim ~/.config
