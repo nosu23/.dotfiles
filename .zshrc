@@ -29,6 +29,8 @@ else
   # Intelプロセッサ用のHomebrewで入れる各種env用のパスはここに書く
 fi
 
+export GPG_TTY=$TTY
+
 # load settings
 source ~/.zsh/alias.zsh
 source ~/.zsh/completion.zsh
