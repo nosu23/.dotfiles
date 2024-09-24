@@ -26,7 +26,7 @@ require("lazy").setup("plugins", {
     },
   },
 })
-
+vim.cmd[[colorscheme molokai]]
 
 vim.keymap.set('n', '<C-n>', ':Neotree filesystem reveal left<CR>')
 
