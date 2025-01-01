@@ -1,6 +1,7 @@
 [user]
 	name = nosu23
 	email = raidzimmer52@gmail.com
+        signingkey = A77319C2C126A9BF
 [core]
 	excludesfile = /Users/nosu/.gitignore_global
 	editor = vim -c \"set fenc=utf-8\"
@@ -22,3 +23,4 @@
 	program = /opt/homebrew/bin/gpg
 [commit]
 	gpgsign = true
+	template = /Users/nosu/.stCommitMsg

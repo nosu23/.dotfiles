@@ -1,0 +1,10 @@
+# vim
+sheldon/plugins.toml ${HOME}/.config/sheldon/plugins.toml
+# zsh
+.zsh ${HOME}/.zsh
+.zshrc ${HOME}/.zshrc
+.vimrc ${HOME}/.vimrc
+# dotfiles
+. ${HOME}/.dotfiles
+# git
+.gitconfig ${HOME}/.gitconfig

@@ -13,5 +13,8 @@ setopt hist_save_no_dups      # 履歴ファイルに書き出す際、新しい
 setopt share_history          # 全てのセッションで履歴を共有する
 setopt CLOBBER                # リダイレクトで上書き
 
+# for gpg
+export GPG_TTY
+
 # gke
 export USE_GKE_GCLOUD_AUTH_PLUGIN=True
