@@ -8,3 +8,5 @@ sheldon/plugins.toml ${HOME}/.config/sheldon/plugins.toml
 . ${HOME}/.dotfiles
 # git
 .gitconfig ${HOME}/.gitconfig
+# alacritty
+alacritty/alacritty.toml ${HOME}/.config/alacritty/alacritty.toml

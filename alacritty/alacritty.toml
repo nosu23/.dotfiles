@@ -1,0 +1,20 @@
+# ====================== WINDOW ======================
+[window]
+
+# Blank space added around the window in pixels
+padding = { x = 4, y = 4 }  # Default: x = 0, y = 0
+
+# ====================== FONT ======================
+[font]
+
+normal = { family = "Menlo", style = "Regular" }  # Default for Linux/BSD: "monospace", Regular
+bold = { family = "Menlo", style = "Bold" }  # Inherits family from normal, Default style: Bold
+italic = { family = "Menlo", style = "Italic" }  # Inherits family from normal, Default style: Italic
+
+size = 13 # Default: 11.25
+
+# ====================== SCROLING ======================
+[scrolling]
+# Maximum number of lines in the scrollback buffer
+history = 10000  # Default: 10000
+multiplier = 3  # Default: 3
