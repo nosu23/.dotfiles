@@ -12,28 +12,35 @@
 
 shell = "zsh"
 
-#apply = ["defer"]
+apply = ["defer"]
 
-#[plugins.zsh-defer]
-#github = "romkatv/zsh-defer"
-#apply = ["source"]
-#
-#[templates]
-#defer = ""
+[templates]
+defer = "{{ hooks?.pre | nl }}{% for file in files %}zsh-defer source \"{{ file }}\"\n{% endfor %}{{ hooks?.post | nl }}"
 
-# For example:
-#
-# [plugins.base16]
-# github = "chriskempson/base16-shell"
-#[plugins.danihodovic-steeef]
-#github = "danihodovic/steeef"
+[plugins.zsh-defer]
+github = 'romkatv/zsh-defer'
+apply = ['source']
+
+[plugins.zsh-autosuggestions]
+github = 'zsh-users/zsh-autosuggestions'
+apply = ['defer']
+
+[plugins.zsh-completions]
+github = 'zsh-users/zsh-completions'
+apply = ['defer']
+
+[plugins.zsh-syntax-highlighting]
+github = 'zsh-users/zsh-syntax-highlighting'
+apply = ['defer']
 
 [plugins.dotfiles-sync]
 local = '~/.dotfiles/.zsh/sync'
 use = ['*.zsh']
 apply = ['source']
 
-[plugins.zimfw-steeef]
-github = "zimfw/steeef"
-apply = ["source"]
+[plugins.mise]
+inline = 'eval "$(mise activate zsh)"'
+
+[plugins.starship]
+inline = 'eval "$(starship init zsh)"'
 

@@ -10,3 +10,7 @@ sheldon/plugins.toml ${HOME}/.config/sheldon/plugins.toml
 .gitconfig ${HOME}/.gitconfig
 # alacritty
 alacritty/alacritty.toml ${HOME}/.config/alacritty/alacritty.toml
+# tmux
+.tmux.conf ${HOME}/.tmux.conf
+# starship
+.config/starship/starship.toml ${HOME}/.config/starship.toml
