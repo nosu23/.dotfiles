@@ -14,3 +14,9 @@ alacritty/alacritty.toml ${HOME}/.config/alacritty/alacritty.toml
 .tmux.conf ${HOME}/.tmux.conf
 # starship
 .config/starship/starship.toml ${HOME}/.config/starship.toml
+
+# starship
+ln -s $(pwd)/.config/ghostty "${HOME}/.config/"
+
+# nvim
+ln -s $(pwd)/nvim ~/.config

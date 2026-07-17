@@ -32,6 +32,13 @@ read_only = " 󰌾" #鍵のicon
 symbol = ''
 truncation_length = 30
 truncation_symbol = ''
+#style = "bold #42A5F5"  # 明るめのスカイブルー
+#style = "bold bright-cyan"
+#style = "bold #a6e22e"
+#style = "bold white on #007acc"
+style = "bold #00bfff"
+#style = "bold #42A5F5"  # 明るめのスカイブルー
+format = "on [$symbol$branch]($style) "
 #ignore_branches = ['master', 'main']
 
 [character]
