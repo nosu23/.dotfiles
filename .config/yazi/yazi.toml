@@ -1,0 +1,11 @@
+[opener]
+bbedit = [
+    { run = 'bbedit %s', desc = "BBEdit", for = "macos", orphan = true },
+]
+
+[open]
+prepend_rules = [
+    { url = "*.txt", use = [ "bbedit", "edit", "reveal" ] },
+    { mime = "inode/empty", use = [ "bbedit", "edit", "reveal" ] },
+    { mime = "text/*", use = [ "bbedit", "edit", "reveal" ] },
+]
