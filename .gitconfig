@@ -1,7 +1,7 @@
 [user]
 	name = nosu23
-	email = raidzimmer52@gmail.com
-        signingkey = A77319C2C126A9BF
+	email = 4378625+nosu23@users.noreply.github
+    signingkey = A77319C2C126A9BF
 [core]
 	excludesfile = /Users/nosu/.gitignore_global
 	editor = vim -c \"set fenc=utf-8\"
@@ -24,3 +24,5 @@
 [commit]
 	gpgsign = true
 	template = /Users/nosu/.stCommitMsg
+[checkout]
+	defaultRemote = origin
