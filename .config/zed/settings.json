@@ -19,12 +19,9 @@
     "light": "Ayu Light",
     "dark": "JetBrains Dark"
   },
-  // 👇 ここからインデントの挙動をコントロールする設定を追加しています
-  "auto_indent": false, // 改行したときに勝手にインデントが入るのを防ぐ
-  "auto_indent_on_paste": false, // コピペしたときに階段状にズレるのを防ぐ
-  "format_on_save": "off", // 保存した瞬間に勝手にインデントが変わるのを防ぐ
-
-  // 👇 SQLとYAMLのタブ幅（スペース数）を明示的に固定したい場合のオプション
+  "auto_indent": false,
+  "auto_indent_on_paste": false,
+  "format_on_save": "off",
   "languages": {
     "SQL": {
       "tab_size": 4
@@ -33,3 +30,4 @@
       "tab_size": 2
     }
   }
+}

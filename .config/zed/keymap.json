@@ -1,0 +1,23 @@
+[
+  {
+    "context": "Workspace",
+    "bindings": {
+      "shift shift": "file_finder::Toggle",
+      "cmd-shift-j": "pane::RevealInProjectPanel"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == insert",
+    "bindings": {
+      // "j k": "vim::NormalBefore"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "cmd-b": "editor::ToggleGitBlame",
+      //"cmd-shift-n": "editor::ConvertToSnakeCase"
+      "cmd-alt-s": "editor::ConvertToSnakeCase"
+    }
+  }
+]

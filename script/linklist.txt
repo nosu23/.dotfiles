@@ -16,7 +16,13 @@ alacritty/alacritty.toml ${HOME}/.config/alacritty/alacritty.toml
 .config/starship/starship.toml ${HOME}/.config/starship.toml
 
 # starship
-ln -s $(pwd)/.config/ghostty "${HOME}/.config/"
+.config/ghostty "${HOME}/.config/"
 
 # nvim
-ln -s $(pwd)/nvim ~/.config
+nvim ~/.config
+
+# yazi
+.config/yazi "${HOME}/.config/"
+
+# herdr
+.config/herdr/config.toml ${HOME}/.config/herdr/config.toml
